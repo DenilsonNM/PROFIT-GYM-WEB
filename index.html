@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarea gym - Denilson</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/892bb677d3.js" crossorigin="anonymous"></script>
+
+  <!-- ------------------------------------- -->
+
+  <script src="lib/responsiveslides/responsiveslides.min.js"></script>
+  <!-- <link rel="stylesheet" href="lib/responsiveslides/responsiveslides.css"> -->
+
+  <!-- ------------------------------------- -->
+
+  <script src="lib/fancybox/fancybox.js"></script>
+  <link rel="stylesheet" href="lib/fancybox/fancybox.css">
+
+  <!-- ------------------------------------- -->
+
+  <script src="lib/animations/wow.min.js"></script>
+  <link rel="stylesheet" href="lib/animations/animate.css">
+
+
+</head>
+
+<body>
+  <header>
+    <div class="div-menu ancho">
+      <div class="div-menu-img-bar">
+
+        <figure>
+          <img src="img/logo.png" alt="">
+        </figure>
+        <a href="#" class="btn-bars" id="btn-bars-id"><i class="fas fa-bars"></i></a>
+
+      </div>
+      <nav class="nav-menu" id="nav-menu-id">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#">COACHES</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ------------------------------------- -->
+
+  <main class="callbacks_container">
+    <ul class="rslides" id="slider">
+      <li><img src="img/slide1.jpg" alt=""></li>
+      <li><img src="img/slide2.jpg" alt=""></li>
+      <li><img src="img/slide3.jpg" alt=""></li>
+    </ul>
+    <article class="main-text">
+      <h1>BEST FITNESS</h1>
+      <p>Our club encourages wellness by providing
+        top-notch equipment, first-class instructors,
+        innovative classes, and qualified staff.</p>
+      <a href="#" class="main-btn animate__animated animate__pulse animate__infinite">JOIN NOW</a>
+    </article>
+  </main>
+
+
+  <!-- ------------------------------------- -->
+
+  <section class="sect-services ancho">
+    <h2>SERVICES</h2>
+    <hr>
+    <div class="div-services" id="services">
+
+      <article class="wow animate__animated animate__fadeInUp">
+        <i class="fas fa-award"></i>
+        <h3>QUALITY SERVICE</h3>
+        <p>At our fitness studio, you can
+          experience the best level of
+          customer service.</p>
+      </article>
+
+      <article class="wow animate__animated animate__fadeInUp">
+        <i class="fas fa-dumbbell"></i>
+        <h3>SPACIOUS GYM</h3>
+        <p>Our gym has enough place for all
+          kinds of workouts and a wide
+          variety of equipment.</p>
+      </article>
+
+      <article class="wow animate__animated animate__fadeInUp">
+        <i class="fa-solid fa-file-invoice"></i>
+        <h3>UNIQUE FITNESS PROGRAMS</h3>
+        <p>Our coaches have developed more
+          than 50 fitness programs and
+          workouts for you.</p>
+      </article>
+
+      <article class="wow animate__animated animate__fadeInUp">
+        <i class="fas fa-users"></i>
+        <h3>GROUP CLASSES</h3>
+        <p>If you prefer training with friends,
+          then our group classes have What
+          you need.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ------------------------------------- -->
+
+  <section class="sect-gallery">
+    <div class="div-gallery">
+      <a href="img/foto1.jpg" data-fancybox="gallery" data-caption="Caption #1">
+        <figure class="foto1">
+          <img src="img/foto1.jpg" alt="">
+        </figure>
+      </a>
+      <a href="img/foto2.jpg" data-fancybox="gallery" data-caption="Caption #1">
+        <figure class="foto2">
+          <img src="img/foto2.jpg" alt="">
+        </figure>
+      </a>
+      <a href="img/foto3.jpg" data-fancybox="gallery" data-caption="Caption #1">
+        <figure class="foto3">
+          <img src="img/foto3.jpg" alt="">
+        </figure>
+      </a>
+      <a href="img/foto4.jpg" data-fancybox="gallery" data-caption="Caption #1">
+        <figure class="foto4">
+          <img src="img/foto4.jpg" alt="">
+        </figure>
+      </a>
+    </div>
+
+    <article class="arti-gallery" id="gallery">
+      <h2>GALLERY <span>FITNESS</span> CLUB</h2>
+      <p>Profit is the fitness club that makes fitness
+        totally accessible to everybody. We promise to
+        help people from all walks of life achieve their
+        individual health and fitness goals — no matter
+        their shape, age, and experience.</p>
+      <a href=" #" class="main-btn animate__animated animate__pulse animate__infinite">JOIN NOW</a>
+    </article>
+  </section>
+
+  <!-- ------------------------------------- -->
+
+  <footer class="foot-social ancho">
+    <a href="#" class="foot-btn-up" id="back-to-top"><i class="fa-solid fa-angle-up"></i></a>
+
+    <p>(c) 2020 Profit. Privacy Policy</p>
+    <div class="foot-social-icons">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <!-- ------------------------------------- -->
+
+  <script>
+
+    $("#btn-bars-id").click(function () {
+      $("#nav-menu-id").slideToggle();
+    });
+
+    /* ------------------------------------- */
+
+    $("#slider").responsiveSlides({
+      auto: false,
+      pager: false,
+      nav: true,
+      speed: 500,
+      namespace: "callbacks",
+      before: function () {
+        $('.events').append("<li>before event fired.</li>");
+      },
+      after: function () {
+        $('.events').append("<li>after event fired.</li>");
+      }
+    });
+
+    /* ------------------------------------- */
+
+    Fancybox.bind('[data-fancybox="gallery"]', {});
+
+    /* ------------------------------------- */
+
+    new WOW().init();
+
+    /* ------------------------------------- */
+
+    $('#back-to-top').click(function () {
+      $('body,html').animate({ scrollTop: 0 }, 500);
+      return false;
+    });
+
+
+  </script>
+
+</body>
+
+</html>
